@@ -1,6 +1,13 @@
 # Strojno čitljiv cjenik — Motivacijski Um
 
-## Gdje će se to vidjeti na tvojoj stranici
+**Objavljeno na:** https://motivacijskium.github.io/cjenik/
+**Link na stranici:** podnožje landing pagea, `motivacijskium.systeme.io/d578f5ab`
+
+Automatika je postavljena i radi. Skripta se pokreće sama svaki radni dan u
+05:10 UTC, generira novi cjenik, briše datoteke starije od 40 dana i osvježi
+popis. Ručni rad nije potreban.
+
+## Gdje se to vidi na tvojoj stranici
 
 Nigdje posebno. Cjenik nije za ljude, nego za programe koji automatski skupljaju
 cijene i za inspekciju. Tvoj landing page ostaje identičan.
@@ -16,7 +23,7 @@ stariji, s datumom i vremenom objave. Boje i font su kao na tvojim stranicama.
 GitHub Actions generira novu datoteku svaki radni dan i objavljuje ju na GitHub
 Pages. Ti ne radiš ništa. Besplatno je, bez ograničenja za ovu namjenu.
 
-**Što ti treba napraviti — tri koraka:**
+**Postavljeno je ovako:**
 
 1. Otvori besplatan račun na `github.com` ako ga nemaš.
 2. U claude.ai idi na Settings → Connectors i poveži GitHub.
