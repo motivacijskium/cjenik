@@ -1,0 +1,39 @@
+name: Objavi cjenik
+
+# Generira novi cjenik svaki radni dan i objavljuje ga na GitHub Pages.
+# Cron je u UTC. 05:10 UTC = 06:10 po hrvatskom zimskom vremenu, 07:10 ljetnom.
+# Namjerno je rano jer GitHub može odgoditi pokretanje, a propis traži objavu
+# najkasnije do 8:00.
+
+on:
+  schedule:
+    - cron: "10 5 * * 1-5"
+  workflow_dispatch:        # omogućuje i ručno pokretanje iz GitHub sučelja
+
+permissions:
+  contents: write
+
+jobs:
+  cjenik:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generiraj cjenik
+        run: python3 generiraj_cjenik.py
+
+      - name: Objavi
+        run: |
+          git config user.name "Cjenik bot"
+          git config user.email "actions@github.com"
+          git add -A docs
+          if git diff --cached --quiet; then
+            echo "Nema promjena."
+          else
+            git commit -m "Cjenik $(date -u +'%d.%m.%Y %H:%M UTC')"
+            git push
+          fi
