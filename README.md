@@ -119,7 +119,7 @@ Prema točki VI. Odluke sadrži oblik objekta, adresu, oznaku objekta, broj pohr
 datum i vrijeme slanja:
 
 ```
-webshop_Petrova Gora 62 Lobor_WEB_7_17.11.2026_06-10.csv
+webshop_motivacijskium_WEB_7_18.11.2026_06-10.csv
 ```
 
 Broj pohrane skripta sama povećava i pamti u `cjenik/.broj_pohrane.json`. Dvotočje u

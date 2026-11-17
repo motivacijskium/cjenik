@@ -25,8 +25,7 @@ from xml.dom import minidom
 # ──────────────────────────────────────────────────────────────────────────────
 
 OBLIK_OBJEKTA = "webshop"                      # oblik prodajnog objekta
-ADRESA_OBJEKTA = "Petrova Gora 62 Lobor"       # ide u naziv datoteke
-ADRESA_PUNA = "Petrova Gora 62, 49253 Lobor"   # ide u XML, s poštanskim brojem
+ADRESA_OBJEKTA = "motivacijskium"            # ide u naziv datoteke
 OZNAKA_OBJEKTA = "WEB"                         # oznaku objekta određuješ sam
 NAZIV_TRGOVCA = "Motivacijski Um"
 
@@ -175,7 +174,6 @@ def zapisi_xml(putanja, redovi, sada, broj_pohrane):
     korijen = ET.Element("Cjenik")
     korijen.set("trgovac", NAZIV_TRGOVCA)
     korijen.set("oblikObjekta", OBLIK_OBJEKTA)
-    korijen.set("adresaObjekta", ADRESA_PUNA)
     korijen.set("oznakaObjekta", OZNAKA_OBJEKTA)
     korijen.set("brojPohrane", str(broj_pohrane))
     korijen.set("datumVrijeme", sada.strftime("%Y-%m-%dT%H:%M:%S"))
