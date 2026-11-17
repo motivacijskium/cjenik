@@ -250,7 +250,7 @@ footer{{margin-top:32px;font-size:13px;color:#70695f}}
 <body>
 <main>
 <h1>Cjenik proizvoda</h1>
-<p class="uvod">{trgovac}, {adresa}. Cjenici su objavljeni u strojno čitljivom
+<p class="uvod">{trgovac}. Cjenici su objavljeni u strojno čitljivom
 CSV i XML formatu u skladu s Odlukom o objavi cjenika proizvoda i usluga
 (NN 101/2026, NN 110/2026). Najnoviji cjenik je prvi na popisu.</p>
 <ul>
@@ -264,7 +264,6 @@ referentni dan: 10. 9. 2026. za Kod smirenosti i njegove dodatke,
 </html>
 """.format(
         trgovac=NAZIV_TRGOVCA,
-        adresa=ADRESA_PUNA,
         redovi="\n".join(redovi_html) if redovi_html else "<li>Nema objavljenih cjenika.</li>",
     )
 
