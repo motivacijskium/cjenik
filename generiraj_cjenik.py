@@ -36,10 +36,10 @@ DANA_ARHIVE = 40                                # propis traži 30; držimo zali
 # ──────────────────────────────────────────────────────────────────────────────
 # 2. KATALOG  — ovdje mijenjaš cijene kad se promijene
 #
-#    sidrena_cijena = cijena koja je vrijedila na referentni dan
+#    bazna_cijena = cijena koja je vrijedila na referentni dan
 #      • Kod smirenosti i dodaci  → 10. 9. 2026.
 #      • Psihološki dekoder, paket → 10. 11. 2026. (prva prodaja)
-#    Sidrena se cijena NE mijenja kad promijeniš maloprodajnu cijenu.
+#    Bazna se cijena NE mijenja kad promijeniš maloprodajnu cijenu.
 # ──────────────────────────────────────────────────────────────────────────────
 
 ARTIKLI = [
@@ -47,7 +47,7 @@ ARTIKLI = [
         "sifra": "MU-KS-EB",
         "naziv": "Kod smirenosti — e-knjiga (PDF)",
         "maloprodajna_cijena": "24.00",
-        "sidrena_cijena": "24.00",
+        "bazna_cijena": "24.00",
         "posebni_oblik_prodaje": "NE",
         "naziv_posebnog_oblika_prodaje": "",
     },
@@ -55,7 +55,7 @@ ARTIKLI = [
         "sifra": "MU-KS-AUDIO",
         "naziv": "Kod smirenosti — audioknjiga",
         "maloprodajna_cijena": "6.00",
-        "sidrena_cijena": "6.00",
+        "bazna_cijena": "6.00",
         "posebni_oblik_prodaje": "NE",
         "naziv_posebnog_oblika_prodaje": "",
     },
@@ -63,7 +63,7 @@ ARTIKLI = [
         "sifra": "MU-KS-P60",
         "naziv": "Prvih 60 sekundi — PDF dodatak",
         "maloprodajna_cijena": "7.00",
-        "sidrena_cijena": "7.00",
+        "bazna_cijena": "7.00",
         "posebni_oblik_prodaje": "NE",
         "naziv_posebnog_oblika_prodaje": "",
     },
@@ -71,7 +71,7 @@ ARTIKLI = [
         "sifra": "MU-PD-EB",
         "naziv": "Psihološki dekoder — e-knjiga (PDF)",
         "maloprodajna_cijena": "24.00",
-        "sidrena_cijena": "16.00",
+        "bazna_cijena": "16.00",
         "posebni_oblik_prodaje": "DA",
         "naziv_posebnog_oblika_prodaje": "Akcija — ponuda za prve čitatelje",
     },
@@ -79,7 +79,7 @@ ARTIKLI = [
         "sifra": "MU-PD-AUDIO",
         "naziv": "Psihološki dekoder — audioknjiga",
         "maloprodajna_cijena": "6.00",
-        "sidrena_cijena": "6.00",
+        "bazna_cijena": "6.00",
         "posebni_oblik_prodaje": "NE",
         "naziv_posebnog_oblika_prodaje": "",
     },
@@ -87,7 +87,7 @@ ARTIKLI = [
         "sifra": "MU-PD-PROT",
         "naziv": "Protokol odgovora — PDF dodatak",
         "maloprodajna_cijena": "7.00",
-        "sidrena_cijena": "7.00",
+        "bazna_cijena": "7.00",
         "posebni_oblik_prodaje": "NE",
         "naziv_posebnog_oblika_prodaje": "",
     },
@@ -95,7 +95,7 @@ ARTIKLI = [
         "sifra": "MU-PAKET-2EB",
         "naziv": "Paket — Kod smirenosti i Psihološki dekoder, obje e-knjige (PDF)",
         "maloprodajna_cijena": "48.00",
-        "sidrena_cijena": "40.00",
+        "bazna_cijena": "40.00",
         "posebni_oblik_prodaje": "NE",
         "naziv_posebnog_oblika_prodaje": "",
     },
@@ -113,7 +113,7 @@ STUPCI = [
     "maloprodajna_cijena",
     "posebni_oblik_prodaje",
     "naziv_posebnog_oblika_prodaje",
-    "sidrena_cijena",
+    "bazna_cijena",
     "barkod",
     "dostupnost",
 ]
@@ -129,7 +129,7 @@ def red_za_artikl(a):
         "maloprodajna_cijena": a["maloprodajna_cijena"],
         "posebni_oblik_prodaje": a["posebni_oblik_prodaje"],
         "naziv_posebnog_oblika_prodaje": a["naziv_posebnog_oblika_prodaje"],
-        "sidrena_cijena": a["sidrena_cijena"],
+        "bazna_cijena": a["bazna_cijena"],
         "barkod": "",
         "dostupnost": "dostupno",
     }
@@ -254,7 +254,7 @@ CSV i XML formatu u skladu s Odlukom o objavi cjenika proizvoda i usluga
 <ul>
 {redovi}
 </ul>
-<footer>Cijene su u eurima. Sidrena cijena je cijena koja je vrijedila na
+<footer>Cijene su u eurima. Bazna cijena je cijena koja je vrijedila na
 referentni dan: 10. 9. 2026. za Kod smirenosti i njegove dodatke,
 10. 11. 2026. za Psihološki dekoder i paket.</footer>
 </main>

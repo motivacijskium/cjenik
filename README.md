@@ -94,7 +94,7 @@ Skripta drži arhivu 40 dana, deset dana zalihe iznad propisanog minimuma.
 Sedam artikala. Kombinacije paketa nisu zasebni artikli — svaki dodatak ima svoju
 cijenu, pa alat za usporedbu sam izračuna bilo koju kombinaciju.
 
-| Artikl | Šifra | Cijena | Sidrena |
+| Artikl | Šifra | Cijena | Bazna |
 |---|---|---:|---:|
 | Kod smirenosti — e-knjiga | MU-KS-EB | 24 € | 24 € |
 | Kod smirenosti — audioknjiga | MU-KS-AUDIO | 6 € | 6 € |
@@ -105,7 +105,7 @@ cijenu, pa alat za usporedbu sam izračuna bilo koju kombinaciju.
 | Paket obje e-knjige | MU-PAKET-2EB | 48 € | 40 € |
 
 Dekoder ima ispunjeno polje posebnog oblika prodaje: „Akcija — ponuda za prve
-čitatelje". U datoteci je time jasno da je 24 € akcijska, a 16 € sidrena cijena.
+čitatelje". U datoteci je time jasno da je 24 € akcijska, a 16 € bazna cijena.
 
 Barkod je prazan jer digitalni proizvodi nemaju EAN. Jedinica mjere je komad.
 
@@ -140,7 +140,7 @@ Kad Dekoderu istekne popust i cijena ide na 32 €, promijeni samo:
 "naziv_posebnog_oblika_prodaje": "",
 ```
 
-Sidrena ostaje `16.00`.
+Bazna ostaje `16.00`.
 
 ## Napomena
 
