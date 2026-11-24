@@ -94,7 +94,7 @@ ARTIKLI = [
     {
         "sifra": "MU-PAKET-2EB",
         "naziv": "Paket — Kod smirenosti i Psihološki dekoder, obje e-knjige (PDF)",
-        "maloprodajna_cijena": "48.00",
+        "maloprodajna_cijena": "40.00",
         "bazna_cijena": "40.00",
         "posebni_oblik_prodaje": "NE",
         "naziv_posebnog_oblika_prodaje": "",
