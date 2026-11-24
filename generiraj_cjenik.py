@@ -16,6 +16,7 @@ import csv
 import datetime
 import json
 import os
+import re
 import urllib.parse
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
@@ -190,6 +191,29 @@ def zapisi_xml(putanja, redovi, sada, broj_pohrane):
         f.write(lijepi)
 
 
+_UZORAK_VREMENA = re.compile(r"_(\d{2})\.(\d{2})\.(\d{4})_(\d{2})-(\d{2})\.(?:csv|xml)$", re.I)
+
+
+def vrijeme_datoteke(naziv):
+    """Vrijeme cjenika iz njegovog imena, a ne iz mtime.
+
+    Mtime nije pouzdan: git checkout, rebase ili ponovno kloniranje repozitorija
+    ga resetiraju na trenutak operacije. Time bi popis pokazivao pogrešno vrijeme,
+    a brisanje iz arhive bi krivo računalo 30-dnevni rok iz propisa. Ime datoteke
+    nosi stvarni datum i vrijeme objave i ne mijenja se.
+    """
+    m = _UZORAK_VREMENA.search(naziv)
+    if m:
+        dan, mjesec, godina, sat, minuta = (int(x) for x in m.groups())
+        try:
+            return datetime.datetime(godina, mjesec, dan, sat, minuta)
+        except ValueError:
+            pass
+    return datetime.datetime.fromtimestamp(
+        os.path.getmtime(os.path.join(IZLAZNA_MAPA, naziv))
+    )
+
+
 def ocisti_arhivu(sada):
     """Briše datoteke starije od DANA_ARHIVE. Propis traži 30 dana dostupnosti."""
     granica = sada - datetime.timedelta(days=DANA_ARHIVE)
@@ -197,9 +221,8 @@ def ocisti_arhivu(sada):
     for naziv in os.listdir(IZLAZNA_MAPA):
         if not naziv.lower().endswith((".csv", ".xml")):
             continue
-        putanja = os.path.join(IZLAZNA_MAPA, naziv)
-        if datetime.datetime.fromtimestamp(os.path.getmtime(putanja)) < granica:
-            os.remove(putanja)
+        if vrijeme_datoteke(naziv) < granica:
+            os.remove(os.path.join(IZLAZNA_MAPA, naziv))
             obrisano += 1
     return obrisano
 
@@ -208,15 +231,13 @@ def zapisi_index():
     """Stranica s direktnim linkovima na sve objavljene cjenike, najnoviji prvi."""
     datoteke = sorted(
         (n for n in os.listdir(IZLAZNA_MAPA) if n.lower().endswith((".csv", ".xml"))),
-        key=lambda n: os.path.getmtime(os.path.join(IZLAZNA_MAPA, n)),
+        key=vrijeme_datoteke,
         reverse=True,
     )
 
     redovi_html = []
     for n in datoteke:
-        vrijeme = datetime.datetime.fromtimestamp(
-            os.path.getmtime(os.path.join(IZLAZNA_MAPA, n))
-        )
+        vrijeme = vrijeme_datoteke(n)
         redovi_html.append(
             '<li><a href="{0}">{1}</a> <span>{2}</span></li>'.format(
                 urllib.parse.quote(n),
