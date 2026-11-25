@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Cjenik trgovac="Motivacijski Um" oblikObjekta="webshop" oznakaObjekta="WEB" brojPohrane="13" datumVrijeme="2026-11-25T06:04:07" valuta="EUR">
+  <Proizvod>
+    <naziv>Kod smirenosti — e-knjiga (PDF)</naziv>
+    <sifra>MU-KS-EB</sifra>
+    <marka>Motivacijski Um</marka>
+    <jedinica_mjere>kom</jedinica_mjere>
+    <cijena_za_jedinicu_mjere>24.00</cijena_za_jedinicu_mjere>
+    <maloprodajna_cijena>24.00</maloprodajna_cijena>
+    <posebni_oblik_prodaje>NE</posebni_oblik_prodaje>
+    <naziv_posebnog_oblika_prodaje/>
+    <bazna_cijena>24.00</bazna_cijena>
+    <barkod/>
+    <dostupnost>dostupno</dostupnost>
+  </Proizvod>
+  <Proizvod>
+    <naziv>Kod smirenosti — audioknjiga</naziv>
+    <sifra>MU-KS-AUDIO</sifra>
+    <marka>Motivacijski Um</marka>
+    <jedinica_mjere>kom</jedinica_mjere>
+    <cijena_za_jedinicu_mjere>6.00</cijena_za_jedinicu_mjere>
+    <maloprodajna_cijena>6.00</maloprodajna_cijena>
+    <posebni_oblik_prodaje>NE</posebni_oblik_prodaje>
+    <naziv_posebnog_oblika_prodaje/>
+    <bazna_cijena>6.00</bazna_cijena>
+    <barkod/>
+    <dostupnost>dostupno</dostupnost>
+  </Proizvod>
+  <Proizvod>
+    <naziv>Prvih 60 sekundi — PDF dodatak</naziv>
+    <sifra>MU-KS-P60</sifra>
+    <marka>Motivacijski Um</marka>
+    <jedinica_mjere>kom</jedinica_mjere>
+    <cijena_za_jedinicu_mjere>7.00</cijena_za_jedinicu_mjere>
+    <maloprodajna_cijena>7.00</maloprodajna_cijena>
+    <posebni_oblik_prodaje>NE</posebni_oblik_prodaje>
+    <naziv_posebnog_oblika_prodaje/>
+    <bazna_cijena>7.00</bazna_cijena>
+    <barkod/>
+    <dostupnost>dostupno</dostupnost>
+  </Proizvod>
+  <Proizvod>
+    <naziv>Psihološki dekoder — e-knjiga (PDF)</naziv>
+    <sifra>MU-PD-EB</sifra>
+    <marka>Motivacijski Um</marka>
+    <jedinica_mjere>kom</jedinica_mjere>
+    <cijena_za_jedinicu_mjere>24.00</cijena_za_jedinicu_mjere>
+    <maloprodajna_cijena>24.00</maloprodajna_cijena>
+    <posebni_oblik_prodaje>DA</posebni_oblik_prodaje>
+    <naziv_posebnog_oblika_prodaje>Akcija — ponuda za prve čitatelje</naziv_posebnog_oblika_prodaje>
+    <bazna_cijena>16.00</bazna_cijena>
+    <barkod/>
+    <dostupnost>dostupno</dostupnost>
+  </Proizvod>
+  <Proizvod>
+    <naziv>Psihološki dekoder — audioknjiga</naziv>
+    <sifra>MU-PD-AUDIO</sifra>
+    <marka>Motivacijski Um</marka>
+    <jedinica_mjere>kom</jedinica_mjere>
+    <cijena_za_jedinicu_mjere>6.00</cijena_za_jedinicu_mjere>
+    <maloprodajna_cijena>6.00</maloprodajna_cijena>
+    <posebni_oblik_prodaje>NE</posebni_oblik_prodaje>
+    <naziv_posebnog_oblika_prodaje/>
+    <bazna_cijena>6.00</bazna_cijena>
+    <barkod/>
+    <dostupnost>dostupno</dostupnost>
+  </Proizvod>
+  <Proizvod>
+    <naziv>Protokol odgovora — PDF dodatak</naziv>
+    <sifra>MU-PD-PROT</sifra>
+    <marka>Motivacijski Um</marka>
+    <jedinica_mjere>kom</jedinica_mjere>
+    <cijena_za_jedinicu_mjere>7.00</cijena_za_jedinicu_mjere>
+    <maloprodajna_cijena>7.00</maloprodajna_cijena>
+    <posebni_oblik_prodaje>NE</posebni_oblik_prodaje>
+    <naziv_posebnog_oblika_prodaje/>
+    <bazna_cijena>7.00</bazna_cijena>
+    <barkod/>
+    <dostupnost>dostupno</dostupnost>
+  </Proizvod>
+  <Proizvod>
+    <naziv>Paket — Kod smirenosti i Psihološki dekoder, obje e-knjige (PDF)</naziv>
+    <sifra>MU-PAKET-2EB</sifra>
+    <marka>Motivacijski Um</marka>
+    <jedinica_mjere>kom</jedinica_mjere>
+    <cijena_za_jedinicu_mjere>40.00</cijena_za_jedinicu_mjere>
+    <maloprodajna_cijena>40.00</maloprodajna_cijena>
+    <posebni_oblik_prodaje>NE</posebni_oblik_prodaje>
+    <naziv_posebnog_oblika_prodaje/>
+    <bazna_cijena>40.00</bazna_cijena>
+    <barkod/>
+    <dostupnost>dostupno</dostupnost>
+  </Proizvod>
+</Cjenik>
